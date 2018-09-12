@@ -37,7 +37,7 @@ class CategoryViewController: SwipeTableViewController {
         
         cell.textLabel?.text = categoryArray?[indexPath.row].name ?? "No categories added yet"
         
-        cell.backgroundColor = UIColor.randomFlat
+        cell.backgroundColor = UIColor(hexString: categoryArray?[indexPath.row].colour ?? "457FBF")
         
         return cell
     }
@@ -113,6 +113,7 @@ class CategoryViewController: SwipeTableViewController {
             
             let newCategory = Category()
             newCategory.name = textField.text!
+            newCategory.colour = UIColor.randomFlat.hexValue()
             
             self.save(category: newCategory)
         }
