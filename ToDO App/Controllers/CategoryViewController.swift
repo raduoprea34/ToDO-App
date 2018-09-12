@@ -95,13 +95,14 @@ class CategoryViewController: UITableViewController {
             
             let newCategory = Category()
             newCategory.name = textField.text!
-                        
+            
             self.save(category: newCategory)
         }
         
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Create new category"
             textField = alertTextField
+            textField.autocapitalizationType = .sentences
         }
         
         alert.addAction(action)

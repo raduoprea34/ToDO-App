@@ -110,6 +110,7 @@ class TodoListViewController: UITableViewController {
         alert.addTextField { (alertTextField) in
             alertTextField.placeholder = "Create new item"
             textField = alertTextField
+            textField.autocapitalizationType = .sentences
         }
         
         alert.addAction(action)
